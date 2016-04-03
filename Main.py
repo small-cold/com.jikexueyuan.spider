@@ -62,7 +62,7 @@ def make_file_path(file_path):
     try:
         os.makedirs(file_path)
     except IOError as ioe:
-        ioe.print("创建文件夹失败")
+        print("创建文件夹失败")
         return False
     else:
         return True
@@ -74,7 +74,7 @@ def default_path():
     if sys_name == "Windows":
         path_list = ["F://", "E://", "D://", "C://"]
     elif sys_name == "Linux":
-        path_list = ["/mnt/hgfs/G/", "~/"]
+        path_list = ["",]
     else:
         return ''
 
